@@ -2,6 +2,7 @@ import { config } from 'dotenv';
 config();
 import express from 'express';
 import logger from './utils/logger';
+import cors from 'cors';
 
 async function main() {
   const app = express();
@@ -9,6 +10,11 @@ async function main() {
   app.use(
     express.urlencoded({
       extended: true,
+    })
+  );
+  app.use(
+    cors({
+      origin: '*',
     })
   );
 
