@@ -2,8 +2,8 @@ const logger = require('winston');
 require('winston-logstash');
 
 logger.add(logger.transports.Logstash, {
-  port: 13299,
-  host: '2f357c18-6f29-4201-91e1-2883e9a45764-ls.logit.io',
+  port: 18444,
+  host: 'ec68a414-7931-4676-9bd9-881897ea65db-ls.logit.io',
   ssl_enable: true,
   max_connect_retries: -1,
 });
